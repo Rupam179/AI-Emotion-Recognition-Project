@@ -4,16 +4,25 @@ import re
 
 app = Flask(__name__)
 
-# Load the trained model
-try:
-    model_bundle = joblib.load('models/emotion_recognition_model.pkl')
-except:
-    # Fallback to baseline model if emotion_recognition_model.pkl doesn't exist
-    model_bundle = joblib.load('models/baseline_model.pkl')
+# Load the trained model with error handling
+model_bundle = None
+vectorizer = None
+classifier = None
+classes = None
 
-vectorizer = model_bundle['vectorizer']
-classifier = model_bundle['model'] if 'model' in model_bundle else model_bundle['classifier']
-classes = model_bundle['classes']
+def load_model():
+    global model_bundle, vectorizer, classifier, classes
+    if model_bundle is None:
+        try:
+            model_bundle = joblib.load('models/baseline_model.pkl')
+            vectorizer = model_bundle['vectorizer']
+            classifier = model_bundle['model'] if 'model' in model_bundle else model_bundle['classifier']
+            classes = model_bundle['classes']
+            print("Model loaded successfully!")
+        except Exception as e:
+            print(f"Error loading model: {e}")
+            return False
+    return True
 
 def clean_text(text):
     """Clean input text"""
@@ -28,6 +37,10 @@ def clean_text(text):
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
+        # Load model if not already loaded
+        if not load_model():
+            return jsonify({'error': 'Model not available'}), 500
+            
         data = request.json
         text = data.get('text', '')
 
@@ -57,7 +70,11 @@ def predict():
 
 @app.route('/health', methods=['GET'])
 def health():
-    return jsonify({'status': 'healthy', 'model_loaded': True})
+    model_status = load_model()
+    return jsonify({
+        'status': 'healthy' if model_status else 'model_error', 
+        'model_loaded': model_status
+    })
 
 if __name__ == '__main__':
     import os
