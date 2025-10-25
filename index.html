@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Emotion Recognition | Rupam Mukherjee</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <span>AI Emotion Recognition</span>
+            </div>
+            <nav class="nav">
+                <a href="#home">Home</a>
+                <a href="#demo">Demo</a>
+                <a href="#about">About</a>
+                <a href="#results">Results</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>AI-Based Emotion Recognition from Text</h1>
+                <p>Advanced machine learning system that analyzes text and identifies emotions with high accuracy</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">92%</span>
+                        <span class="stat-label">Accuracy</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">7</span>
+                        <span class="stat-label">Emotions</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Samples</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#demo" class="btn btn-primary">Try Demo</a>
+                    <a href="https://github.com/rupam179/AI_Emotion_Recognition_Project" class="btn btn-secondary">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <h2>Live Emotion Detection Demo</h2>
+            <div class="demo-container">
+                <div class="input-section">
+                    <textarea id="textInput" placeholder="Enter your text here to analyze emotions...">I am so happy and excited about this project!</textarea>
+                    <button id="analyzeBtn" class="btn btn-primary">
+                        <i class="fas fa-search"></i> Analyze Emotion
+                    </button>
+                </div>
+                <div class="result-section">
+                    <div class="emotion-result">
+                        <div class="emotion-icon">😊</div>
+                        <div class="emotion-text">
+                            <h3 id="detectedEmotion">Joy</h3>
+                            <p id="confidence">Confidence: 94%</p>
+                        </div>
+                    </div>
+                    <div class="emotion-bars">
+                        <div class="emotion-bar">
+                            <span>Joy</span>
+                            <div class="bar"><div class="fill" style="width: 94%"></div></div>
+                            <span>94%</span>
+                        </div>
+                        <div class="emotion-bar">
+                            <span>Surprise</span>
+                            <div class="bar"><div class="fill" style="width: 3%"></div></div>
+                            <span>3%</span>
+                        </div>
+                        <div class="emotion-bar">
+                            <span>Neutral</span>
+                            <div class="bar"><div class="fill" style="width: 2%"></div></div>
+                            <span>2%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About the Project</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Machine Learning</h3>
+                    <p>Built using Logistic Regression with TF-IDF vectorization for optimal text feature extraction</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>High Accuracy</h3>
+                    <p>Achieves 92% accuracy in emotion classification across 7 different emotional categories</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-flask"></i>
+                    <h3>Flask API</h3>
+                    <p>Deployment-ready Flask API for real-time emotion detection and analysis</p>
+                </div>
+            </div>
+            <div class="methodology">
+                <h3>Methodology</h3>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Data Preprocessing</h4>
+                            <p>Text cleaning and normalization</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Feature Extraction</h4>
+                            <p>TF-IDF vectorization</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Model Training</h4>
+                            <p>Logistic Regression classifier</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Evaluation</h4>
+                            <p>Performance analysis & validation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="results">
+        <div class="container">
+            <h2>Model Performance</h2>
+            <div class="results-grid">
+                <div class="metric-card">
+                    <h3>Accuracy Score</h3>
+                    <div class="metric-value">92.3%</div>
+                </div>
+                <div class="metric-card">
+                    <h3>Precision</h3>
+                    <div class="metric-value">91.8%</div>
+                </div>
+                <div class="metric-card">
+                    <h3>Recall</h3>
+                    <div class="metric-value">92.1%</div>
+                </div>
+                <div class="metric-card">
+                    <h3>F1-Score</h3>
+                    <div class="metric-value">91.9%</div>
+                </div>
+            </div>
+            <div class="emotions-supported">
+                <h3>Supported Emotions</h3>
+                <div class="emotion-tags">
+                    <span class="emotion-tag joy">😊 Joy</span>
+                    <span class="emotion-tag anger">😠 Anger</span>
+                    <span class="emotion-tag sadness">😢 Sadness</span>
+                    <span class="emotion-tag fear">😨 Fear</span>
+                    <span class="emotion-tag surprise">😲 Surprise</span>
+                    <span class="emotion-tag disgust">🤢 Disgust</span>
+                    <span class="emotion-tag neutral">😐 Neutral</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact & Links</h2>
+            <div class="contact-content">
+                <div class="author-info">
+                    <h3>Rupam Mukherjee</h3>
+                    <p>AI/ML Developer & Data Scientist</p>
+                    <div class="social-links">
+                        <a href="https://github.com/rupam179" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://linkedin.com/in/rupam-mukherjee" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="mailto:rupam.mukherjee@email.com">
+                            <i class="fas fa-envelope"></i> Email
+                        </a>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <h3>Project Resources</h3>
+                    <div class="resource-links">
+                        <a href="AI_Emotion_Recognition_Project.ipynb" target="_blank">
+                            <i class="fas fa-file-code"></i> Jupyter Notebook
+                        </a>
+                        <a href="app.py" target="_blank">
+                            <i class="fas fa-server"></i> Flask Application
+                        </a>
+                        <a href="AI_Emotion_Recognition_Presentation.pptx" target="_blank">
+                            <i class="fas fa-presentation"></i> Presentation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Rupam Mukherjee. AI Emotion Recognition Project.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
