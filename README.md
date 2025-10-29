@@ -85,7 +85,7 @@ AI_Emotion_Recognition_Project/
 ## 👨‍💻 Author
 **Rupam Mukherjee**
 - GitHub: [@Rupam179](https://github.com/Rupam179)
-- LinkedIn: [Rupam Mukherjee](https://www.linkedin.com/in/rupam-mukherjee-647a092b0?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BOmBFJNcfSNyxiOAtU45S%2Fg%3D%3D)
+- LinkedIn: [Rupam Mukherjee](https://www.linkedin.com/in/rupam-mukherjee-647a092b0/)
 - Email: mukherjeerupam14@gmail.com
 
 ## 📄 License
