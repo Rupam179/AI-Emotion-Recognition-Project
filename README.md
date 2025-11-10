@@ -2,8 +2,8 @@
 
 > **Author:** Rupam Mukherjee
 
-## 🌐 Live Demo
-**[🚀 View Interactive Website](https://rupam179.github.io/AI_Emotion_Recognition_Project)**
+## 🌐 View Video Demo
+**[🚀 View Interactive Website Video](https://drive.google.com/file/d/1w3adCoA3EtjKbxZ39XTvNyf35u8Yct-2/view?usp=sharing)**
 
 ## 🎯 Project Overview
 This project implements a machine learning solution for emotion recognition from text data. The system can classify text into seven emotional categories with 92% accuracy.
